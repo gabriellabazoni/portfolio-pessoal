@@ -1,0 +1,253 @@
+/* Importa as fontes "Krona One" e "Montserrat" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@600&display=swap');
+
+/* Define variáveis de cores */
+:root {
+    --cor-background: #2c3336;
+    --cor-text: #FCFFE7;
+    --cor-contranst: #fc44af;
+    --cor-button-hover: #3d494f;
+}
+
+/* Remove as margens e o preenchimento padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-background);
+    color: var(--cor-text);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 12%;
+}
+
+/* Cria um layout flexível com espaçamento entre os itens do menu */
+.cabecalho__menu {
+    display: flex;
+    gap: 5rem;
+}
+
+.cabecalho__menu__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cor-contranst);
+    text-decoration: none;
+}
+
+/* Adiciona sublinhado e cursor de ponteiro ao passar o mouse nos links do menu */
+.cabecalho__menu__link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.apresentacao {
+    padding: 4% 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.apresentacao__conteudo {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.apresentacao__conteudo__titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 2rem;
+}
+
+.apresentacao__conteudo__titulo--destaque {
+    color: var(--cor-contranst);
+}
+
+.apresentacao__conteudo__texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+}
+
+
+/* Organiza os links de apresentação em colunas */
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.25rem;
+}
+
+.apresentacao__links__link {
+    width: 72%;
+    padding: 4% 4%;
+    border: 0.15rem solid var(--cor-contranst);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-text);
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-button-hover);
+}
+
+.apresentacao__imagem {
+    border-radius: 2rem;
+    width: 40%;
+}
+
+.apresentacao__imagem:hover {
+    border: 0.25rem solid var(--cor-contranst);
+    border-radius: 2rem;
+}
+
+.rodape {
+    padding: 1.4%;
+    background-color: var(--cor-contranst);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--cor-text);
+}
+
+.rodape:hover {
+    background-color: #fa06a9;
+}
+
+/* curriculo.html */
+
+.curriculo {
+    padding: 6% 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.curriculo__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.curriculo__conteudo__topicos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.curriculo__conteudo__topicos__titulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 2rem;
+}
+
+.curriculo__conteudo__topicos__texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #fc44af;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fc44af;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e40085;
+}
+
+@media (max-width: 1100px) {
+
+    /* Ajusta o preenchimento do cabeçalho em telas menores */
+    .cabecalho {
+        padding: 2%;
+    }
+
+    /* Centraliza o menu do cabeçalho em telas menores */
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    /* Reorganiza a seção de apresentação em telas menores */
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 4%;
+    }
+
+    /* Ajusta a largura do conteúdo da apresentação em telas menores */
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
